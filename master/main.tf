@@ -15,6 +15,6 @@ resource "aws_instance" "puppetmaster" {
     key_name = "${var.aws_key_name}"
     subnet_id = "${var.subnet_id}"
     security_groups = ["${var.security_group}"]
-    user_data = "${replace(file(\"${path.module}/internal.conf\"), \"__REPOSITORY__\", \"${var.repository}\")}"
+    user_data = "${replace(file(\"${path.module}/puppetmaster.conf\"), \"__REPOSITORY__\", \"${var.repository}\")}"
 }
 
