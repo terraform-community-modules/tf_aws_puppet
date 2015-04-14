@@ -15,6 +15,6 @@ resource "aws_instance" "puppet-client" {
     key_name = "${var.aws_key_name}"
     subnet_id = "${var.subnet_id}"
     security_groups = ["${var.security_group}"]
-    user_data = "${replace(file(\"${path.module}/puppetmaster.conf\"), \"__PUPPETMASTER_IP__\", \"${var.puppetmaster_ip}\")}"
+    user_data = "${replace(file(\"${path.module}/puppetagent.conf\"), \"__PUPPETMASTER_IP__\", \"${var.puppetmaster_ip}\")}"
 }
 
