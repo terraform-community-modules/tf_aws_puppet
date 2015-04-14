@@ -11,6 +11,7 @@ resource "aws_instance" "puppetmaster" {
     iam_instance_profile = "${var.iam_instance_profile}"
     tags {
         Name = "puppetmaster"
+        puppet_role = "puppetmaster"
     }
     key_name = "${var.aws_key_name}"
     subnet_id = "${var.subnet_id}"

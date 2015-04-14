@@ -9,3 +9,4 @@ variable "iam_instance_profile" {
 }
 variable "security_group" {}
 variable "puppetmaster_ip" {}
+variable "puppet_role" {}
