@@ -5,7 +5,7 @@ module "ami" {
   instance_type = "${var.instance_type}"
 }
 
-resource "aws_instance" "puppet client" {
+resource "aws_instance" "puppet-client" {
     ami = "${module.ami.ami_id}"
     instance_type = "${var.instance_type}"
     iam_instance_profile = "${var.iam_instance_profile}"
